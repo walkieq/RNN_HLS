@@ -28,3 +28,16 @@ The reports are in the following directory:
 lstm_mnist/myproject_prj/solution1/syn/report
 
 ## Introduction of our LSTM unit
+A diagram of an LSTM cell is as shown in the following figure. It consists of three main parts. At the front, there are four LSTM gates which perform matrix-vector multiplications (MVM), followed by activation functions. While in the tail, there are a few element-wise operations. 
+
+![LSTM](markdown_images/lstm03.png)
+
+
+This work splits one LSTM layer into two sub-layers. The first one is the mvm_x which has no data dependencies while the second one includes all the others which form a loop with data dependencies, as shown in the following figure. 
+
+![LSTM-sublayers](markdown_images/lstm_hls12.png)
+
+
+After we have split the LSTM layer into two sub-layers, the two can be pipelined with balanced initiation interval (II) as shown in this figure. 
+
+![ts_pipeline](markdown_images/ts_pipeline06.png)
