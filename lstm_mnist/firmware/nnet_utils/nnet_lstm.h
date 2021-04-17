@@ -310,7 +310,7 @@ void lstm_seq(
 
     // Parallel mode
     //#pragma HLS PIPELINE
-    #pragma HLS INLINE
+    //#pragma HLS INLINE
 
 
     data_T h_pre[CONFIG_T::length_h];

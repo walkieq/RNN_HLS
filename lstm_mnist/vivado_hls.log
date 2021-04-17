@@ -6,16 +6,16 @@
 
 source /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'zque' on host 'cccad5.doc.ic.ac.uk' (Linux_x86_64 version 3.10.0-957.1.3.el7.x86_64) on Fri Apr 16 09:01:28 BST 2021
+INFO: [HLS 200-10] For user 'zque' on host 'cccad5.doc.ic.ac.uk' (Linux_x86_64 version 3.10.0-957.1.3.el7.x86_64) on Sat Apr 17 17:42:45 BST 2021
 INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
-INFO: [HLS 200-10] In directory '/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test'
+INFO: [HLS 200-10] In directory '/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist'
 Sourcing Tcl script 'build_prj.tcl'
-INFO: [HLS 200-10] Creating and opening project '/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj'.
+INFO: [HLS 200-10] Creating and opening project '/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj'.
 INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
 INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
-INFO: [HLS 200-10] Creating and opening solution '/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1'.
+INFO: [HLS 200-10] Creating and opening solution '/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1'.
 INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
 INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-i'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
@@ -34,10 +34,10 @@ INFO: [SIM 211-3] *************** CSIM finish ***************
 ***** C/RTL SYNTHESIS *****
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 17564 ; free virtual = 622035
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1054.238 ; gain = 532.148 ; free physical = 17562 ; free virtual = 622032
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 43116 ; free virtual = 620105
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1051.270 ; gain = 529.180 ; free physical = 43116 ; free virtual = 620105
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:41 ; elapsed = 00:00:59 . Memory (MB): peak = 1056.594 ; gain = 534.504 ; free physical = 17436 ; free virtual = 621921
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 1053.625 ; gain = 531.535 ; free physical = 42979 ; free virtual = 619982
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
@@ -48,7 +48,7 @@ INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::de
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2>' (firmware/nnet_utils/nnet_lstm.h:56) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:02 ; elapsed = 00:01:21 . Memory (MB): peak = 1058.383 ; gain = 536.293 ; free physical = 17403 ; free virtual = 621892
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:02 ; elapsed = 00:01:16 . Memory (MB): peak = 1055.414 ; gain = 533.324 ; free physical = 42958 ; free virtual = 619966
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::softmax<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, softmax_config5>' (firmware/nnet_utils/nnet_activation.h:231:4).
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense.h:60:55).
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LSTM_TS' (firmware/nnet_utils/nnet_lstm.h:426) in function 'nnet::lstm<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2>' for pipelining.
@@ -102,10 +102,10 @@ INFO: [XFORM 203-102] Partitioning array 'gate_o_activ.V' (firmware/nnet_utils/n
 INFO: [XFORM 203-102] Partitioning array 'input_x.V' (firmware/nnet_utils/nnet_lstm.h:417) automatically.
 INFO: [XFORM 203-102] Partitioning array 'exp_res.V' (firmware/nnet_utils/nnet_activation.h:237) automatically.
 INFO: [XFORM 203-102] Partitioning array 'data_cache.V' (firmware/nnet_utils/nnet_activation.h:239) automatically.
-INFO: [XFORM 203-131] Reshaping array 'input_1.V' (firmware/myproject.cpp:25) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'layer5_out.V' (firmware/myproject.cpp:26) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'layer2_out.V' (firmware/myproject.cpp:59) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'layer3_out.V' (firmware/myproject.cpp:63) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'input_1.V' (firmware/myproject.cpp:25) in dimension 1 with a cyclic factor 28.
+INFO: [XFORM 203-101] Partitioning array 'layer2_out.V' (firmware/myproject.cpp:62) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer3_out.V' (firmware/myproject.cpp:66) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_dense.h:61) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'mult.V' (firmware/nnet_utils/nnet_dense.h:60) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'c_tmp1.V' (firmware/nnet_utils/nnet_lstm.h:46) in dimension 1 completely.
@@ -3711,8 +3711,8 @@ INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::de
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::lstm_tail<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2>' (firmware/nnet_utils/nnet_lstm.h:56) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>' (firmware/nnet_utils/nnet_dense.h:77) automatically.
-INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0' at call site (firmware/myproject.cpp:65) by setting 'weights.V' to 'w3.V'.
-INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' at call site (firmware/myproject.cpp:65) by setting 'biases.V' to 'b3.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0' at call site (firmware/myproject.cpp:68) by setting 'weights.V' to 'w3.V'.
+INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' at call site (firmware/myproject.cpp:68) by setting 'biases.V' to 'b3.V'.
 INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0' at call site (firmware/nnet_utils/nnet_lstm.h:436) by setting 'weights.V' to 'wr2.V'.
 INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0' at call site (firmware/nnet_utils/nnet_lstm.h:436) by setting 'biases[0].V' to 'acc_x[0].V'.
 INFO: [XFORM 203-622] Instantiating function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0'(firmware/nnet_utils/nnet_dense.h:69:27) to 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0.0' at call site (firmware/nnet_utils/nnet_lstm.h:436) by setting 'biases[1].V' to 'acc_x[1].V'.
@@ -3852,7 +3852,7 @@ INFO: [XFORM 203-11] Balancing expressions in function 'nnet::softmax<ap_fixed<1
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_x_lstm2>.0.0' (firmware/nnet_utils/nnet_dense.h:69:27)...3577 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config_h_lstm2>.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0' (firmware/nnet_utils/nnet_dense.h:69:27)...4090 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' (firmware/nnet_utils/nnet_dense.h:69:27)...320 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:23:39 ; elapsed = 00:24:38 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 9230 ; free virtual = 613053
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:23:13 ; elapsed = 00:24:02 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 34097 ; free virtual = 611117
 WARNING: [XFORM 203-631] Renaming function 'nnet::softmax<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, softmax_config5>' to 'softmax' (firmware/nnet_utils/nnet_activation.h:231:4)
 WARNING: [XFORM 203-631] Renaming function 'nnet::sigmoid<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_lstm2>' to 'sigmoid' (firmware/nnet_utils/nnet_activation.h:158:22)
 WARNING: [XFORM 203-631] Renaming function 'nnet::lstm_tail<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config1_lstm2, config2_lstm2>' to 'lstm_tail' (firmware/nnet_utils/nnet_lstm.h:50:1)
@@ -3864,13 +3864,41 @@ WARNING: [XFORM 203-631] Renaming function 'nnet::dense_simple<ap_fixed<16, 6, (
 WARNING: [XFORM 203-631] Renaming function 'nnet::dense_simple<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config3>.0.0' to 'dense_simple.0.0.1' (firmware/nnet_utils/nnet_dense.h:69:27)
 INFO: [XFORM 203-531] Rewinding loop 'LSTM_TS' (firmware/nnet_utils/nnet_lstm.h:426) in function 'lstm'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'LSTM_TS' in function 'lstm'.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:28:54 ; elapsed = 00:29:54 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 9222 ; free virtual = 613048
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:28:26 ; elapsed = 00:29:17 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 34086 ; free virtual = 611109
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
 WARNING: [SYN 201-103] Legalizing function name 'dense_simple.0.0' to 'dense_simple_0_0'.
 WARNING: [SYN 201-103] Legalizing function name 'dense_simple.0.0.0.0' to 'dense_simple_0_0_0_0'.
 WARNING: [SYN 201-103] Legalizing function name 'hard_tanh.1' to 'hard_tanh_1'.
 WARNING: [SYN 201-103] Legalizing function name 'dense_simple.0.0.1' to 'dense_simple_0_0_1'.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_0_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_1_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_2_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_3_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_4_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_5_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_6_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_7_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_8_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_9_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_10_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_11_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_12_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_13_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_14_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_15_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_16_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_17_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_18_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_19_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_20_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_21_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_22_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_23_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_24_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_25_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_26_V' changing to the default 'ap_memory' mode.
+WARNING: [SYN 201-561] Cannot apply I/O mode 'ap_vld' on port 'input_1_27_V' changing to the default 'ap_memory' mode.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3878,14 +3906,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 9, Final II = 8, Depth = 8.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1813.79 seconds; current allocated memory: 775.462 MB.
+INFO: [HLS 200-111]  Elapsed time: 1777.17 seconds; current allocated memory: 770.481 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 126.98 seconds; current allocated memory: 903.199 MB.
+INFO: [HLS 200-111]  Elapsed time: 115.21 seconds; current allocated memory: 898.217 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3893,14 +3921,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.0.0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 92.36 seconds; current allocated memory: 956.617 MB.
+INFO: [HLS 200-111]  Elapsed time: 83.05 seconds; current allocated memory: 951.096 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 195.48 seconds; current allocated memory: 1.030 GB.
+INFO: [HLS 200-111]  Elapsed time: 180.34 seconds; current allocated memory: 1.025 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sigmoid' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3908,13 +3936,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'sigmoid'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 89.67 seconds; current allocated memory: 1.042 GB.
+INFO: [HLS 200-111]  Elapsed time: 73.24 seconds; current allocated memory: 1.036 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 4.12 seconds; current allocated memory: 1.045 GB.
+INFO: [HLS 200-111]  Elapsed time: 3.57 seconds; current allocated memory: 1.040 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3922,13 +3950,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.48 seconds; current allocated memory: 1.046 GB.
+INFO: [HLS 200-111]  Elapsed time: 4.13 seconds; current allocated memory: 1.041 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.27 seconds; current allocated memory: 1.047 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.11 seconds; current allocated memory: 1.042 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hard_tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3936,13 +3964,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'hard_tanh'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.5 seconds; current allocated memory: 1.048 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.42 seconds; current allocated memory: 1.043 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 1.28 seconds; current allocated memory: 1.049 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.14 seconds; current allocated memory: 1.043 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lstm_tail' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3950,14 +3978,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'lstm_tail'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 1.95 seconds; current allocated memory: 1.051 GB.
+INFO: [HLS 200-111]  Elapsed time: 1.91 seconds; current allocated memory: 1.046 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 3.41 seconds; current allocated memory: 1.054 GB.
+INFO: [HLS 200-111]  Elapsed time: 3.02 seconds; current allocated memory: 1.049 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lstm' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3969,15 +3997,15 @@ WARNING: [SCHED 204-68] The II Violation in module 'lstm' (Loop: LSTM_TS): Unabl
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:454) to 'lstm_tail' and 'call' operation ('call_ret2', firmware/nnet_utils/nnet_lstm.h:436) to 'dense_simple.0.0.0.0'.
 WARNING: [SCHED 204-68] The II Violation in module 'lstm' (Loop: LSTM_TS): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1)
    between 'call' operation ('call_ret', firmware/nnet_utils/nnet_lstm.h:454) to 'lstm_tail' and 'call' operation ('call_ret2', firmware/nnet_utils/nnet_lstm.h:436) to 'dense_simple.0.0.0.0'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 11, Depth = 30.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 11, Depth = 20.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 4.58 seconds; current allocated memory: 1.058 GB.
+INFO: [HLS 200-111]  Elapsed time: 3.63 seconds; current allocated memory: 1.051 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 25.55 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-111]  Elapsed time: 22.95 seconds; current allocated memory: 1.066 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dense_simple_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -3985,14 +4013,14 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dense_simple.0.0.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 28.48 seconds; current allocated memory: 1.091 GB.
+INFO: [HLS 200-111]  Elapsed time: 25.85 seconds; current allocated memory: 1.081 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Starting global binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 7.17 seconds; current allocated memory: 1.103 GB.
+INFO: [HLS 200-111]  Elapsed time: 6.41 seconds; current allocated memory: 1.094 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -4000,80 +4028,106 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'softmax'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 8.67 seconds; current allocated memory: 1.111 GB.
+INFO: [HLS 200-111]  Elapsed time: 7.21 seconds; current allocated memory: 1.101 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 13.38 seconds; current allocated memory: 1.122 GB.
+INFO: [HLS 200-111]  Elapsed time: 10.84 seconds; current allocated memory: 1.112 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 13.78 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-111]  Elapsed time: 11.22 seconds; current allocated memory: 1.114 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 34.67 seconds; current allocated memory: 1.141 GB.
+INFO: [HLS 200-111]  Elapsed time: 35.16 seconds; current allocated memory: 1.131 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-104] Estimated max fanout for 'dense_simple_0_0' is 15845 from HDL expression: (1'b1 == ap_CS_fsm_state2)
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0'.
-INFO: [HLS 200-111]  Elapsed time: 34.36 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-111]  Elapsed time: 29.82 seconds; current allocated memory: 1.243 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_0_0' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-104] Estimated max fanout for 'dense_simple_0_0_0_0' is 61764 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce_reg))
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_0_0'.
-INFO: [HLS 200-111]  Elapsed time: 122.17 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111]  Elapsed time: 110.99 seconds; current allocated memory: 1.579 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sigmoid' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'sigmoid_sigmoid_table6' to 'sigmoid_sigmoid_tbkb' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sigmoid'.
-INFO: [HLS 200-111]  Elapsed time: 132.23 seconds; current allocated memory: 1.854 GB.
+INFO: [HLS 200-111]  Elapsed time: 124.91 seconds; current allocated memory: 1.843 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh_1'.
-INFO: [HLS 200-111]  Elapsed time: 12.42 seconds; current allocated memory: 1.868 GB.
+INFO: [HLS 200-111]  Elapsed time: 11.18 seconds; current allocated memory: 1.857 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hard_tanh' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hard_tanh'.
-INFO: [HLS 200-111]  Elapsed time: 8.11 seconds; current allocated memory: 1.876 GB.
+INFO: [HLS 200-111]  Elapsed time: 8.15 seconds; current allocated memory: 1.865 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm_tail' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_tail'.
-INFO: [HLS 200-111]  Elapsed time: 9.52 seconds; current allocated memory: 1.894 GB.
+INFO: [HLS 200-111]  Elapsed time: 9.4 seconds; current allocated memory: 1.883 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lstm' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-104] Estimated max fanout for 'lstm' is 12550 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln426_reg_7949 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm'.
-INFO: [HLS 200-111]  Elapsed time: 21.63 seconds; current allocated memory: 1.966 GB.
+INFO: [HLS 200-111]  Elapsed time: 12.75 seconds; current allocated memory: 1.949 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dense_simple_0_0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-104] Estimated max fanout for 'dense_simple_0_0_1' is 6304 from HDL expression: (1'b0 == ap_block_pp0_stage0)
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_simple_0_0_1'.
-INFO: [HLS 200-111]  Elapsed time: 38.77 seconds; current allocated memory: 2.004 GB.
+INFO: [HLS 200-111]  Elapsed time: 34 seconds; current allocated memory: 1.978 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'softmax' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SYN 201-210] Renamed object name 'softmax_invert_table3' to 'softmax_invert_tacud' due to the length limit 20
 INFO: [RTGEN 206-100] Finished creating RTL model for 'softmax'.
-INFO: [HLS 200-111]  Elapsed time: 16.92 seconds; current allocated memory: 2.040 GB.
+INFO: [HLS 200-111]  Elapsed time: 16.74 seconds; current allocated memory: 2.015 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_0_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_1_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_2_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_3_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_4_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_5_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_6_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_7_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_8_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_9_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_10_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_11_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_12_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_13_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_14_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_15_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_16_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_17_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_18_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_19_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_20_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_21_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_22_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_23_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_24_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_25_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_26_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_27_V' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer5_out_0_V' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer5_out_1_V' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer5_out_2_V' to 'ap_vld'.
@@ -4087,26 +4141,25 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer5_out_9_V' 
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_in_1' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/const_size_out_1' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-104] Estimated max fanout for 'myproject' is 12560 from HDL expression: ap_rst
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 25.39 seconds; current allocated memory: 2.080 GB.
+INFO: [HLS 200-111]  Elapsed time: 24.72 seconds; current allocated memory: 2.056 GB.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 229.06 MHz
 INFO: [RTMG 210-279] Implementing memory 'sigmoid_sigmoid_tbkb_rom' using block ROMs.
 INFO: [RTMG 210-279] Implementing memory 'softmax_exp_table2_rom' using block ROMs.
 INFO: [RTMG 210-279] Implementing memory 'softmax_invert_tacud_rom' using block ROMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:45:23 ; elapsed = 00:49:14 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 8202 ; free virtual = 612588
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:43:12 ; elapsed = 00:46:52 . Memory (MB): peak = 17707.297 ; gain = 17185.207 ; free physical = 32709 ; free virtual = 610279
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-***** C/RTL SYNTHESIS COMPLETED IN 0h48m50s *****
+***** C/RTL SYNTHESIS COMPLETED IN 0h46m32s *****
 ***** C/RTL SIMULATION *****
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
 INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "/vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling myproject_test.cpp_pre.cpp.tb.cpp
    Compiling apatb_myproject.cpp
    Compiling myproject.cpp_pre.cpp.tb.cpp
-   Compiling myproject_test.cpp_pre.cpp.tb.cpp
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
 INFO: Unable to open input/predictions file, using default input.
@@ -4122,39 +4175,95 @@ Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_myproject_top glbl -prj myproject.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s myproject -debug wave 
 Multi-threading is on. Using 70 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/lstm.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/lstm_tail.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lstm_tail
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_7_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_7_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_0_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_0_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myproject
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_9_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_9_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_18_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_18_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_16_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_16_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_11_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_11_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_24_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_24_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/lstm.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module lstm
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hard_tanh
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax_exp_table2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax_exp_table2_rom
-INFO: [VRFC 10-311] analyzing module softmax_exp_table2
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_23_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_23_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_8_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_8_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_1_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_1_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_6_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_6_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/hard_tanh_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/dense_simple_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dense_simple_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_myproject_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/sigmoid_sigmoid_tbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_22_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_22_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_25_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_25_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/sigmoid_sigmoid_tbkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sigmoid_sigmoid_tbkb_rom
 INFO: [VRFC 10-311] analyzing module sigmoid_sigmoid_tbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module softmax
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/softmax_invert_tacud.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_10_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_10_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/myproject.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_myproject_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_17_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_17_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_19_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_19_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/softmax_invert_tacud.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module softmax_invert_tacud_rom
 INFO: [VRFC 10-311] analyzing module softmax_invert_tacud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/lstm_tail.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lstm_tail
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/myproject.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module myproject
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_26_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_26_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_21_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_21_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_14_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_14_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_13_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_13_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_5_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_5_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/sigmoid.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sigmoid
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/dense_simple_0_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dense_simple_0_0_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_2_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_2_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_12_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_12_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_15_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_15_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_20_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_20_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/softmax_exp_table2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax_exp_table2_rom
+INFO: [VRFC 10-311] analyzing module softmax_exp_table2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_27_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_27_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/dense_simple_0_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_simple_0_0_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/softmax.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module softmax
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/hard_tanh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hard_tanh
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_3_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_3_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/AESL_automem_input_1_4_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_1_4_V
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
@@ -4177,6 +4286,34 @@ Compiling module xil_defaultlib.softmax_invert_tacud(DataWidth=1...
 Compiling module xil_defaultlib.softmax
 Compiling module xil_defaultlib.dense_simple_0_0_1
 Compiling module xil_defaultlib.myproject
+Compiling module xil_defaultlib.AESL_automem_input_1_0_V
+Compiling module xil_defaultlib.AESL_automem_input_1_1_V
+Compiling module xil_defaultlib.AESL_automem_input_1_2_V
+Compiling module xil_defaultlib.AESL_automem_input_1_3_V
+Compiling module xil_defaultlib.AESL_automem_input_1_4_V
+Compiling module xil_defaultlib.AESL_automem_input_1_5_V
+Compiling module xil_defaultlib.AESL_automem_input_1_6_V
+Compiling module xil_defaultlib.AESL_automem_input_1_7_V
+Compiling module xil_defaultlib.AESL_automem_input_1_8_V
+Compiling module xil_defaultlib.AESL_automem_input_1_9_V
+Compiling module xil_defaultlib.AESL_automem_input_1_10_V
+Compiling module xil_defaultlib.AESL_automem_input_1_11_V
+Compiling module xil_defaultlib.AESL_automem_input_1_12_V
+Compiling module xil_defaultlib.AESL_automem_input_1_13_V
+Compiling module xil_defaultlib.AESL_automem_input_1_14_V
+Compiling module xil_defaultlib.AESL_automem_input_1_15_V
+Compiling module xil_defaultlib.AESL_automem_input_1_16_V
+Compiling module xil_defaultlib.AESL_automem_input_1_17_V
+Compiling module xil_defaultlib.AESL_automem_input_1_18_V
+Compiling module xil_defaultlib.AESL_automem_input_1_19_V
+Compiling module xil_defaultlib.AESL_automem_input_1_20_V
+Compiling module xil_defaultlib.AESL_automem_input_1_21_V
+Compiling module xil_defaultlib.AESL_automem_input_1_22_V
+Compiling module xil_defaultlib.AESL_automem_input_1_23_V
+Compiling module xil_defaultlib.AESL_automem_input_1_24_V
+Compiling module xil_defaultlib.AESL_automem_input_1_25_V
+Compiling module xil_defaultlib.AESL_automem_input_1_26_V
+Compiling module xil_defaultlib.AESL_automem_input_1_27_V
 Compiling module xil_defaultlib.apatb_myproject_top
 Compiling module work.glbl
 Built simulation snapshot myproject
@@ -4186,9 +4323,9 @@ Built simulation snapshot myproject
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source /mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Apr 16 09:51:49 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Fri Apr 16 09:51:49 2021...
+source /mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/xsim.dir/myproject/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Apr 17 18:30:46 2021. For additional details about this file, please refer to the WebTalk help file at /vol/cc/opt/Xilinx/2019.2/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 17 18:30:46 2021...
 
 ****** xsim v2019.2 (64-bit)
   **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
@@ -4232,9 +4369,91 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_myproject_top/AESL_inst_myproject/layer5_out_0_V_ap_vld -into $layer5_out_group -color #ffff00 -radix hex
 ## add_wave /apatb_myproject_top/AESL_inst_myproject/layer5_out_0_V -into $layer5_out_group -radix hex
 ## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
-## set input_1_group [add_wave_group input_1(wire) -into $cinputgroup]
-## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_V_ap_vld -into $input_1_group -color #ffff00 -radix hex
-## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_V -into $input_1_group -radix hex
+## set input_1_group [add_wave_group input_1(memory) -into $cinputgroup]
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_27_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_27_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_27_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_26_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_26_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_26_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_25_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_25_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_25_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_24_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_24_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_24_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_23_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_23_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_23_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_22_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_22_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_22_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_21_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_21_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_21_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_20_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_20_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_20_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_19_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_19_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_19_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_18_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_18_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_18_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_17_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_17_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_17_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_16_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_16_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_16_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_15_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_15_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_15_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_14_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_14_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_14_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_13_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_13_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_13_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_12_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_12_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_12_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_11_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_11_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_11_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_10_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_10_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_10_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_9_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_9_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_9_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_8_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_8_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_8_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_7_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_7_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_7_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_6_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_6_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_6_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_5_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_5_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_5_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_4_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_4_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_4_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_3_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_3_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_3_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_2_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_2_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_2_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_1_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_1_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_1_V_address0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_0_V_q0 -into $input_1_group -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_0_V_ce0 -into $input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/AESL_inst_myproject/input_1_0_V_address0 -into $input_1_group -radix hex
 ## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
 ## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_start -into $blocksiggroup
 ## add_wave /apatb_myproject_top/AESL_inst_myproject/ap_done -into $blocksiggroup
@@ -4251,7 +4470,34 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_myproject_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
 ## add_wave /apatb_myproject_top/ready_cnt -into $tb_simstatus_group -radix hex
 ## add_wave /apatb_myproject_top/done_cnt -into $tb_simstatus_group -radix hex
-## add_wave /apatb_myproject_top/LENGTH_input_1_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_0_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_1_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_2_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_3_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_4_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_5_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_6_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_7_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_8_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_9_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_10_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_11_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_12_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_13_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_14_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_15_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_16_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_17_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_18_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_19_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_20_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_21_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_22_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_23_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_24_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_25_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_26_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_myproject_top/LENGTH_input_1_27_V -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_myproject_top/LENGTH_layer5_out_0_V -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_myproject_top/LENGTH_layer5_out_1_V -into $tb_portdepth_group -radix hex
 ## add_wave /apatb_myproject_top/LENGTH_layer5_out_2_V -into $tb_portdepth_group -radix hex
@@ -4293,9 +4539,91 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ## add_wave /apatb_myproject_top/layer5_out_0_V_ap_vld -into $tb_layer5_out_group -color #ffff00 -radix hex
 ## add_wave /apatb_myproject_top/layer5_out_0_V -into $tb_layer5_out_group -radix hex
 ## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
-## set tb_input_1_group [add_wave_group input_1(wire) -into $tbcinputgroup]
-## add_wave /apatb_myproject_top/input_1_V_ap_vld -into $tb_input_1_group -color #ffff00 -radix hex
-## add_wave /apatb_myproject_top/input_1_V -into $tb_input_1_group -radix hex
+## set tb_input_1_group [add_wave_group input_1(memory) -into $tbcinputgroup]
+## add_wave /apatb_myproject_top/input_1_27_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_27_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_27_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_26_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_26_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_26_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_25_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_25_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_25_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_24_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_24_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_24_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_23_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_23_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_23_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_22_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_22_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_22_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_21_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_21_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_21_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_20_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_20_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_20_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_19_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_19_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_19_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_18_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_18_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_18_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_17_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_17_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_17_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_16_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_16_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_16_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_15_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_15_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_15_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_14_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_14_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_14_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_13_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_13_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_13_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_12_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_12_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_12_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_11_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_11_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_11_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_10_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_10_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_10_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_9_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_9_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_9_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_8_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_8_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_8_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_7_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_7_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_7_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_6_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_6_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_6_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_5_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_5_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_5_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_4_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_4_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_4_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_3_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_3_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_3_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_2_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_2_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_2_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_1_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_1_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_1_V_address0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_0_V_q0 -into $tb_input_1_group -radix hex
+## add_wave /apatb_myproject_top/input_1_0_V_ce0 -into $tb_input_1_group -color #ffff00 -radix hex
+## add_wave /apatb_myproject_top/input_1_0_V_address0 -into $tb_input_1_group -radix hex
 ## save_wave_config myproject.wcfg
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
@@ -4305,19 +4633,19 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [0.00%] @ "113000"
-// RTL Simulation : 1 / 1 [100.00%] @ "1818000"
+// RTL Simulation : 1 / 1 [100.00%] @ "1768000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 1837500 ps : File "/mnt/ccnas2/bdp/zque/ws/CERN/hls4rnn/lstm-hls4ml/new-template-test/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 960
+$finish called at time : 1787500 ps : File "/mnt/ccnas2/bdp/zque/ws/CERN/LSTM-HLS/lstm_mnist/myproject_prj/solution1/sim/verilog/myproject.autotb.v" Line 2320
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri Apr 16 09:52:05 2021...
+INFO: [Common 17-206] Exiting xsim at Sat Apr 17 18:31:07 2021...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: Unable to open input/predictions file, using default input.
 0.0449219 0.37207 0.0888672 0.0595703 0.101563 0.0722656 0.0615234 0.0898438 0.0498047 0.0634766 
 INFO: Saved inference results to file: tb_data/rtl_cosim_results.log
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-***** C/RTL SIMULATION COMPLETED IN 0h1m30s *****
+***** C/RTL SIMULATION COMPLETED IN 0h1m40s *****
 ***** C/RTL VALIDATION *****
 INFO: Test PASSED
-INFO: [HLS 200-112] Total elapsed time: 3046.77 seconds; peak allocated memory: 2.080 GB.
-INFO: [Common 17-206] Exiting vivado_hls at Fri Apr 16 09:52:13 2021...
+INFO: [HLS 200-112] Total elapsed time: 2913.92 seconds; peak allocated memory: 2.056 GB.
+INFO: [Common 17-206] Exiting vivado_hls at Sat Apr 17 18:31:17 2021...
