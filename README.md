@@ -1,5 +1,6 @@
 # LSTM-HLS
 
+This repository includes the LSTM template and one mnist example in Vivado HLS. We are still work on more examples which will be release later. If you find any issue, please ping me an email. 
 
 ## lstm-mnist
 A MNIST application implemented by HLS-based LSTM
