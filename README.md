@@ -20,14 +20,25 @@ def mnist_lstm(x):
 Only be tested using Vivado HLS 2019.02
 
 ```bat
-cd lstm-mnist
-vivado_hls -f build_prj.tcl
+cd lstm-mnist/prj_cmd
+vivado_hls -f build_prj_ku115.tcl
 ```
 
 - Check the report
 
 The reports are in the following directory: 
 lstm_mnist/myproject_prj/solution1/syn/report
+
+## Citation
+If you find the LSTM template and mnist exmaple useful, please cite our paper:
+
+@inproceedings{que2019efficient,
+  title="{Accelerating Recurrent Neural Networks for Gravitational Wave Experiments}",
+  author={Que, Zhiqiang and Wang, Erwei and Marikar, Umar and Moreno, Eric and Ngadiuba, Jennifer and Javed, Hamza and Borzyszkowski, Bartłomiej and Aarrestad, Thea and Loncar, Vladimir and Summers, Sioni and Pierini, Maurizio and Cheung, Peter Y and Luk, Wayne },
+  booktitle={32th International Conference on Application-specific Systems, Architectures and Processors (ASAP)},
+  year={2021},
+  organization={IEEE}
+}
 
 ## Introduction of our LSTM unit
 A diagram of an LSTM cell is as shown in the following figure. It consists of three main parts. At the front, there are four LSTM gates which perform matrix-vector multiplications (MVM), followed by activation functions. While in the tail, there are a few element-wise operations. 
