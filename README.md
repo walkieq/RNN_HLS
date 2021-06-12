@@ -34,7 +34,7 @@ lstm_mnist/myproject_prj/solution1/syn/report
 If you find the LSTM template and mnist exmaple useful, please cite our paper:
 
 ```{=latex}
-@inproceedings{que2019efficient,
+@inproceedings{que2021accelerating,
   title="{Accelerating Recurrent Neural Networks for Gravitational Wave Experiments}",
   author={Que, Zhiqiang and Wang, Erwei and Marikar, Umar and Moreno, Eric and Ngadiuba, Jennifer and Javed, Hamza and Borzyszkowski, Bartłomiej and Aarrestad, Thea and Loncar, Vladimir and Summers, Sioni and Pierini, Maurizio and Cheung, Peter Y and Luk, Wayne },
   booktitle={32th International Conference on Application-specific Systems, Architectures and Processors (ASAP)},
