@@ -177,6 +177,8 @@ void lstm_fw(
 
 
 
+// LSTM layer with setting the sequence return 
+// output: hidden_size x timestep
 template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A, typename CONFIG_X, typename CONFIG_H>
 void lstm_seq(
     data_T data[CONFIG_T::length_x*CONFIG_T::timestep],
@@ -264,6 +266,8 @@ void lstm_seq(
 }// lstm_06_025
 
 
+// LSTM layer without setting the sequence return 
+// output: only the final hidden units 
 template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A, typename CONFIG_X, typename CONFIG_H>
 void lstm(
 	//int index,
@@ -350,7 +354,110 @@ void lstm(
         res[ii] = (res_T) h_cur[ii];
     }
 
-}// lstm_05_025
+}// lstm_
+
+// LSTM + Timedistrbuted Dense
+// improve timing and help vivado hls to synthesis easily when timestep ls large
+template<class data_T, class res_T, typename CONFIG_T, typename CONFIG_A, typename CONFIG_X, typename CONFIG_H, typename CONFIG_TD>
+void lstm_seq_td(
+    data_T data[CONFIG_T::length_x*CONFIG_T::timestep],
+    typename CONFIG_T::weight_t weights_x[CONFIG_T::length_x * CONFIG_T::length_h * 4],
+    typename CONFIG_T::weight_t weights_h[CONFIG_T::length_h * CONFIG_T::length_h * 4],
+    typename CONFIG_T::bias_t   biases[CONFIG_T::length_h * 4],
+
+	typename CONFIG_TD::weight_t weights_td[CONFIG_TD::n_in * CONFIG_TD::n_out],
+	typename CONFIG_TD::bias_t   biases_td [CONFIG_TD::n_out],
+    res_T  res[CONFIG_TD::n_out*CONFIG_T::timestep]
+){
+
+    //typename CONFIG_T::mult_t mult_x[CONFIG_T::length_x * CONFIG_T::length_h * 4 ];
+    //typename CONFIG_T::mult_t mult_h[CONFIG_T::length_h * CONFIG_T::length_h * 4 ];
+    typename CONFIG_T::accum_t acc_x[CONFIG_T::length_h * 4];
+    typename CONFIG_T::accum_t acc[CONFIG_T::length_h * 4];
+    data_T acc_activ[CONFIG_T::length_h * 4];
+
+    // Parallel mode
+    //#pragma HLS PIPELINE
+    #pragma HLS INLINE
+
+
+    data_T h_pre[CONFIG_T::length_h];
+    data_T h_cur[CONFIG_T::length_h];
+    typename CONFIG_T::accum_t c_pre[CONFIG_T::length_h];
+    typename CONFIG_T::accum_t c_cur[CONFIG_T::length_h];
+    data_T c_cur_activ[CONFIG_T::length_h];
+
+    typename CONFIG_T::accum_t gate_i[CONFIG_T::length_h];
+    typename CONFIG_T::accum_t gate_f[CONFIG_T::length_h];
+    typename CONFIG_T::accum_t gate_g[CONFIG_T::length_h];
+    typename CONFIG_T::accum_t gate_o[CONFIG_T::length_h];
+    data_T gate_i_activ[CONFIG_T::length_h];
+    data_T gate_f_activ[CONFIG_T::length_h];
+    data_T gate_g_activ[CONFIG_T::length_h];
+    data_T gate_o_activ[CONFIG_T::length_h];
+    res_T tdense_out[CONFIG_TD::n_out];
+
+
+    data_T input_x[CONFIG_T::length_x];
+
+    for(int ii = 0; ii < CONFIG_T::length_h; ii++){
+        #pragma HLS unroll
+        h_pre[ii] = 0;
+        c_pre[ii] = 0;
+    }
+
+    TIMESTEP_TD:for(int its = 0; its < CONFIG_T::timestep; its++) {
+        #pragma HLS PIPELINE rewind
+
+
+        INPUT_X:
+        for(int ix = 0; ix < CONFIG_T::length_x; ix++){
+            #pragma HLS UNROLL //factor=1
+        //	#pragma HLS PIPELINE
+            input_x[ix] = data[ix+its*CONFIG_T::length_x] ;
+        }
+
+        dense_simple<data_T, typename CONFIG_T::accum_t, CONFIG_X>(input_x, acc_x, weights_x, biases);
+        dense_simple<data_T, typename CONFIG_T::accum_t, CONFIG_H>(h_pre, acc, weights_h, acc_x);
+
+        GATES_SPLIT:
+        for(int igate = 0; igate < CONFIG_T::length_h; igate++){
+            #pragma HLS UNROLL
+            gate_i[igate] = acc[igate];
+            gate_f[igate] = acc[1*CONFIG_T::length_h+igate];
+            gate_g[igate] = acc[2*CONFIG_T::length_h+igate];
+            gate_o[igate] = acc[3*CONFIG_T::length_h+igate];
+        }
+
+        sigmoid   <typename CONFIG_T::accum_t, data_T, CONFIG_A> ( gate_i, gate_i_activ);
+        sigmoid   <typename CONFIG_T::accum_t, data_T, CONFIG_A> ( gate_f, gate_f_activ);
+        hard_tanh <typename CONFIG_T::accum_t, data_T, CONFIG_A> ( gate_g, gate_g_activ); // tanh
+        sigmoid   <typename CONFIG_T::accum_t, data_T, CONFIG_A> ( gate_o, gate_o_activ);
+
+        lstm_tail<data_T, CONFIG_T, CONFIG_A> (gate_i_activ, gate_f_activ, gate_g_activ, gate_o_activ, c_pre, c_cur, h_cur);
+
+        for(int ii = 0; ii < CONFIG_T::length_h; ii++){
+            #pragma HLS UNROLL
+            h_pre[ii] = h_cur[ii];
+            c_pre[ii] = c_cur[ii];
+
+            //res[ii+its*CONFIG_T::length_h] = (res_T) h_cur[ii];
+        }
+        nnet::dense_simple<data_T, res_T, CONFIG_TD>(h_cur, tdense_out, weights_td, biases_td);
+
+        OUTPUT_FINAL: for(int ii = 0; ii < CONFIG_TD::n_out; ii++) {
+    		#pragma HLS unroll
+            res[ii+its*CONFIG_TD::n_out] = (res_T) tdense_out[ii];
+        }
+        //res[ii+its*CONFIG_T::length_h] = (res_T) h_cur[ii];
+
+    }
+
+}// lstm_seq_td
+
+
+
+
 
 }//end namespace
 
