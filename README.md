@@ -1,8 +1,9 @@
 # LSTM-HLS
 
-This repository includes the LSTM template and one mnist example in Vivado HLS. We are still work on more examples which will be released later. If you find any issue, please ping me an email. 
+This repository includes the LSTM template and a few examples in Vivado HLS. These examples are tested using Vivado HLS 2019.02. We are still work on more examples which will be released later. If you find any issue, please ping me an email. 
 
-## lstm-mnist
+
+## lstm_mnist
 A MNIST application implemented by HLS-based LSTM
 
 - Model
@@ -18,10 +19,8 @@ def mnist_lstm(x):
 
 - How to run
 
-Only be tested using Vivado HLS 2019.02
-
 ```bat
-cd lstm-mnist/prj_cmd
+cd lstm_mnist/prj_cmd
 vivado_hls -f build_prj_ku115.tcl
 ```
 
@@ -29,6 +28,26 @@ vivado_hls -f build_prj_ku115.tcl
 
 The reports are in the following directory: 
 lstm_mnist/myproject_prj/solution1/syn/report
+
+## lstm_ae
+
+- Model
+```python
+def autoencoder_lstm(x):
+    inputs = Input(shape=(x.shape[1], x.shape[2]))
+    L1 = LSTM(9, return_sequences=False)(inputs)
+    L2 = RepeatVector(x.shape[1])(L1)
+    L3 = LSTM(9, return_sequences=True)(L3)
+    output = TimeDistributed(Dense(x.shape[2]))(L3)
+    model = Model(inputs=inputs, outputs=output)
+    return model
+```
+- How to run
+
+```bat
+cd lstm_ae_small/prj_cmd
+vivado_hls -f build_prj_z7045.tcl
+```
 
 ## Citation
 If you find the LSTM template and mnist exmaple useful, please cite our paper:
