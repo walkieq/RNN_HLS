@@ -16,6 +16,18 @@
 #include "HLS_AE_SMALL/dense1_b.h"
 
 
+// workaround the csynth latency issue via putting the for-loop in a function
+void ae_repeat(
+    input_t in[N_TS],
+    input_t out[N1_LH * N_TS] 
+){
+    #pragma HLS PIPELINE 
+	for(int ii = 0; ii < N_TS; ii++){
+		for(int jj = 0; jj < N1_LH; jj++){
+			out[ii*N1_LH+jj] = in[jj];
+		}
+	}
+};
 
 #pragma hls_design top
 void lstm(
@@ -51,14 +63,16 @@ void lstm(
     }
 #endif
 
-    REPEAT:
-	for(int ii = 0; ii < N_TS; ii++){
-		#pragma HLS unroll
-		for(int jj = 0; jj < N1_LH; jj++){
-			#pragma HLS unroll
-			repeat_out[ii*N1_LH+jj] = lstm1_out[jj];
-		}
-	}
+    // workaround the csynth latency issue via putting the for-loop in a function
+    ae_repeat (lstm1_out, repeat_out);
+    //REPEAT:
+	//for(int ii = 0; ii < N_TS; ii++){
+	//	#pragma HLS unroll
+	//	for(int jj = 0; jj < N1_LH; jj++){
+	//		#pragma HLS unroll
+	//		repeat_out[ii*N1_LH+jj] = lstm1_out[jj];
+	//	}
+	//}
 
     // LSTM + TimeDistributed Dense
     nnet::lstm_seq_td<input_t, result_t, config1_lstm2, config2_lstm2, config_x_lstm2, config_h_lstm2, config3>(repeat_out, lstm2_wx, lstm2_wh, lstm2_wb, dense1_w, dense1_b, lstm_out);
