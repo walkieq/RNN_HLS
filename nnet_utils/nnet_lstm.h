@@ -26,6 +26,7 @@ struct lstm_config
 
     static const unsigned LSTM_DEBUG = 0;
     static const unsigned reuse_factor = 1;
+    static const unsigned reuse_factor_tail = 1;
     static const bool store_weights_in_bram = false;
 };
 
