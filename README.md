@@ -2,7 +2,6 @@
 
 This repository includes the LSTM template and a few examples in Vivado HLS. These examples are tested using **Vivado HLS 2019.02**. We are still work on more examples which will be released later. If you find any issue, please ping me an email. 
 
-This work proposes II balancing for a coarse-grained pipelined architecture to enable fast multi-layer LSTM inference running on FPGAs. 
 
 ## Citation
 If you find the LSTM template and these exmaples useful, please cite our paper:
@@ -16,6 +15,10 @@ If you find the LSTM template and these exmaples useful, please cite our paper:
   organization={IEEE}
 }
 ```
+
+This work proposes II balancing for a coarse-grained pipelined architecture to enable fast multi-layer LSTM inference running on FPGAs. 
+More can be found in our paper: 
+https://arxiv.org/abs/2106.14089
 
 
 ## Example1: lstm mnist
