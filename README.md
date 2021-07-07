@@ -37,6 +37,12 @@ def mnist_lstm(x):
 
 - How to run
 
+Using GUI:
+1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
+2) Add the tb_lstm.cpp as the test bench
+3) Go ahead. That's it.
+
+Using Non-GUI:
 ```bat
 cd lstm_mnist/prj_cmd
 vivado_hls -f build_prj_ku115.tcl
