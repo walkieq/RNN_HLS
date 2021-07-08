@@ -2,6 +2,7 @@
 
 This repository includes the LSTM template and a few examples in Vivado HLS. These examples are tested using **Vivado HLS 2019.02**. We are still work on more examples which will be released later. If you find any issue, please ping me an email. 
 
+Thanks to [HLS4ML](https://fastmachinelearning.org/hls4ml/). Our template and examples are designed to be compatibale with HLS4ML and many of the low level blocks used in this project is from HLS4ML. This template is planed to be merged into HLS4ML later. 
 
 ## Citation
 If you find the LSTM template and these exmaples useful, please cite our paper:
@@ -36,23 +37,9 @@ def mnist_lstm(x):
 ```
 
 - How to run
-
-Using GUI:
 1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
-2) Add the tb_lstm.cpp as the test bench
+2) And with the tb_lstm.cpp as the test bench
 3) Go ahead. That's it.
-
-Using Non-GUI:
-```bat
-cd lstm_mnist/prj_cmd
-vivado_hls -f build_prj_ku115.tcl
-```
-
-- Check the report
-
-The report can be found here: 
-prj_cmd/myproject_prj/solution1/syn/report/lstm_csynth.rpt
-
 
 ## Example2: lstm autoencoder targeting anomaly detection
 
@@ -67,17 +54,12 @@ def autoencoder_lstm(x):
     model = Model(inputs=inputs, outputs=output)
     return model
 ```
+
 - How to run
+1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
+2) And with the tb_lstm.cpp as the test bench
+3) Go ahead. That's it.
 
-```bat
-cd lstm_ae_small/prj_cmd
-vivado_hls -f build_prj_z7045.tcl
-```
-
-- Check the report
-
-The report can be found here: 
-prj_cmd/myproject_prj/xxxx/syn/report/lstm_csynth.rpt
 
 
 ## Introduction of II balancing
