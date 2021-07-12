@@ -41,6 +41,13 @@ def mnist_lstm(x):
 2) And with the tb_lstm.cpp as the test bench
 3) Go ahead. That's it.
 
+Some examples require setting the maximum_size of the config_array_partition to be 4096. 
+1) Right click the Solution name and choose "Solution Setting..."
+2) In the General, choose "Add..."
+3) In the command:, choose config_array_partition
+4) Change the maximum_size from 1024 to 4096 and remove all the other numbers. 
+
+
 ## Example2: lstm autoencoder targeting anomaly detection
 
 - Model
