@@ -36,7 +36,7 @@ def mnist_lstm(x):
     return model
 ```
 
-- How to run
+- How to run using Vivado HLS GUI
 1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
 2) And with the tb_lstm.cpp as the test bench
 3) Go ahead. That's it.
@@ -62,7 +62,7 @@ def autoencoder_lstm(x):
     return model
 ```
 
-- How to run
+- How to run using Vivado HLS GUI
 1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
 2) And with the tb_lstm.cpp as the test bench
 3) Go ahead. That's it.
