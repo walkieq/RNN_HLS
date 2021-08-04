@@ -35,6 +35,13 @@ def mnist_lstm(x):
     model = Model(inputs=inputs, outputs=output)
     return model
 ```
+- How to run without GUI
+```batch
+cd lstm_mnist/prj_cmd
+vivado_hls -f build.tcl
+```
+The reports are in the following directory: prj_cmd/prj_vivado/cmd_ku115_mnist_r1/syn/report/lstm_csynth.rpt
+
 
 - How to run using Vivado HLS GUI
 1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
@@ -61,6 +68,14 @@ def autoencoder_lstm(x):
     model = Model(inputs=inputs, outputs=output)
     return model
 ```
+
+- How to run without GUI
+```batch
+cd lstm_ae_small/prj_cmd
+vivado_hls -f build.tcl
+```
+The reports are in the following directory: prj_cmd/prj_vivado/cmd_z7045_ae_r1/syn/report/lstm_csynth.rpt
+
 
 - How to run using Vivado HLS GUI
 1) Create a new HLS project with lstm.cpp, lstm.h and parameter.h as the source
