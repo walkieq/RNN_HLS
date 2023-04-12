@@ -24,13 +24,13 @@ https://arxiv.org/abs/2106.14089
 ## Simple examples of LSTMs using hls4ml
 - Environment: 
 ```python
+cd rnn_using_hls4ml
 conda env create -f environment.yml
 conda activate hls4ml-rnn
 ```
 
 - How to run
 ```python
-cd rnn_using_hls4ml
 python t1_lstm_mnist_hls4ml.py
 ```
 The t1 example is for a single-layer lstm on mnist dataset while the t2 example is for a 2-layer lstm on the same dataset. 
