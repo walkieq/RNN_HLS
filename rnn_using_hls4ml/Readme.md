@@ -1,10 +1,18 @@
 Some simple examples of LSTMs using hls4ml
 
-- Environment: 
+- Python Environment: 
 ```python
 conda env create -f environment.yml
 conda activate hls4ml-rnn
 ```
+
+- Vivado HLS Environment: 
+You can simply run the following to add the Xilinx FPGA tool to the path:
+```python
+source /opt/Xilinx/Vivado/2019.2/settings64.sh
+```
+replace the vivado location with the one on your machine. 
+
 
 - How to run
 ```python
