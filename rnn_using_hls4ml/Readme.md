@@ -20,8 +20,8 @@ python t1_lstm_mnist_hls4ml.py
 ```
 The t1 example is for a single-layer lstm on mnist dataset while the t2 example is for a 2-layer lstm on the same dataset. 
 
-
 - Model in t1 example
+The Model
 ```python
 def mnist_lstm(x):
     inputs = Input(shape=(x.shape[1], x.shape[2]))
@@ -44,4 +44,10 @@ def mnist_lstm(x):
     return model
 ```
 
-Currently the default lstm implementation in hls4ml is used. I will update the template later. 
+- Model in t3 example
+It is the same as the model in t1 example, but a unified pruning rate of 50% is applied. 
+The DSP utilization is readuced from 111% to around 61% on the target FPGA device. 
+
+
+- TODO
+Currently the default lstm implementation in hls4ml is used. The latency and initiation interval are large. I will update the LSTM template later. 
