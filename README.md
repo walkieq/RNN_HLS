@@ -21,7 +21,7 @@ This work proposes II balancing for a coarse-grained pipelined architecture to e
 More can be found in our paper: 
 https://arxiv.org/abs/2106.14089
 
-## Simple examples of LSTMs using hls4ml
+## Examples of LSTMs using hls4ml
 - Environment: 
 ```python
 cd rnn_using_hls4ml
@@ -36,7 +36,7 @@ python t1_lstm_mnist_hls4ml.py
 The t1 example is for a single-layer lstm on mnist dataset while the t2 example is for a 2-layer lstm on the same dataset. 
 Currently the default lstm implementation in hls4ml is used. I will update it later. 
 
-## Example (no hls4ml): lstm mnist
+## Other example (no hls4ml): lstm mnist
 A MNIST application implemented by HLS-based LSTM
 
 - Model
@@ -69,7 +69,7 @@ Some examples require setting the maximum_size of the config_array_partition to 
 4) Change the maximum_size from 1024 to 4096 and remove all the other numbers. 
 
 
-## Example (no hls4ml): lstm autoencoder targeting anomaly detection
+## Another example (no hls4ml): lstm autoencoder targeting anomaly detection
 
 - Model
 ```python
