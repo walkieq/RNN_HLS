@@ -1,0 +1,17 @@
+name: hls4ml-rnn-intel
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - tensorflow==2.11.1
+  - tensorflow-datasets==4.8.3
+  - scikit-learn==1.2.2
+  - jupyterhub
+  - pydot
+  - graphviz
+  - pip
+  - pip:
+    - jupyter
+    - hls4ml[profiling]==0.7.1
+    - qkeras==0.9.0
+    - conifer==0.2b0
