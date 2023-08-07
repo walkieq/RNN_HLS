@@ -99,7 +99,7 @@ print("-----------------------------------")
 
 hls_model = hls4ml.converters.convert_from_keras_model(model,
                                                        hls_config=config,
-                                                       output_dir='dnn_model/hls4ml_prj_18bit',
+                                                       output_dir='dnn_model/hls4ml_prj',
                                                        backend = 'Quartus')
                                                         #part='')
 
