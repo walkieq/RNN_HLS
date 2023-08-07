@@ -1,4 +1,5 @@
-Some simple examples of LSTMs using hls4ml and Intel FPGAs
+Some simple examples of LSTMs using hls4ml and Intel FPGAs. 
+I am using Intel HLS version 21.4. The default FPGA chip in hls4ml is A10 1150. 
 
 - Python Environment: 
 ```python
@@ -35,6 +36,9 @@ def mnist_lstm(x):
 
 - Model in t3 example
 It is the same as the model in t1 example, but a unified pruning rate of 50% is applied. 
+
+- Model in t0
+It is a simple MLP model which targets Intel FPGA. 
 
 
 - TODO
