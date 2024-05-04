@@ -12,9 +12,22 @@ If you find the LSTM template and these exmaples useful, please cite our paper:
   title="{Accelerating Recurrent Neural Networks for Gravitational Wave Experiments}",
   author={Que, Zhiqiang and Wang, Erwei and Marikar, Umar and Moreno, Eric and Ngadiuba, Jennifer and Javed, Hamza and Borzyszkowski, Bartłomiej and Aarrestad, Thea and Loncar, Vladimir and Summers, Sioni and Pierini, Maurizio and Cheung, Peter Y and Luk, Wayne },
   booktitle={32th International Conference on Application-specific Systems, Architectures and Processors (ASAP)},
+  pages={117--124},
   year={2021},
   organization={IEEE}
 }
+
+@software{RNN_HLS_11112775,
+  author       = {Zhiqiang Que},
+  title        = {walkieq/RNN\_HLS: RNN\_HLS\_v0.5},
+  month        = may,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.5},
+  doi          = {10.5281/zenodo.11112775},
+  url          = {https://doi.org/10.5281/zenodo.11112775}
+}
+
 ```
 
 This work proposes II balancing for a coarse-grained pipelined architecture to enable fast multi-layer LSTM inference running on FPGAs. 
